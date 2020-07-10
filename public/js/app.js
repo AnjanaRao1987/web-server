@@ -10,7 +10,7 @@ const message2 = document.querySelector('#message2');
 weatherForm.addEventListener('submit',(e)=>{
     e.preventDefault();
     const location = serachTerm.value;
-    const link = 'http://localhost:3000/weather?address='+location
+    const link = '/weather?address='+location
     message1.textContent = 'Loading.....'
     fetch(link).then((response)=>{
     response.json().then((data)=>{

@@ -3,6 +3,8 @@ const express = require('express');
 const app = express();
 const hbs = require('hbs');
 
+const port = process.env.PORT || 3000;
+
 const geoCode = require('./utils/geoCode');
 const forCast = require('./utils/forecast');
 
@@ -86,6 +88,6 @@ app.get('*',(req,res)=>{
         text:' 404 page'
     })
 })
-app.listen(3000,()=>{
+app.listen(port,()=>{
     console.log('Server is up and running');
 });
