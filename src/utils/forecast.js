@@ -7,7 +7,7 @@ const forecast = (longitude,latitude, callback) =>{
             callback('Network Error',undefined);
         }else{
            const body = JSON.parse(response.body);
-           callback(undefined,`Current temperature is ${body.current.temperature} but it feels like ${body.current.feelslike}`);
+           callback(undefined,`Current temperature is ${body.current.temperature} but it feels like ${body.current.feelslike}.And humidity is ${body.current.humidity}`);
         }
         })
 
